@@ -10,9 +10,13 @@ internal class LeapYearsShould {
     // los años no divisibles por 4 no son años bisiestos
     @Test
     fun `Be leap year if is divisible by 400`() {
-        val leapYears = LeapYears()
-        val result = leapYears.isLeapYear(2000)
+        val isLeapYears = LeapYears().isLeapYear(2000)
+        assertThat(isLeapYears).isEqualTo(true)
+    }
 
-        assertThat(result).isEqualTo(true)
+    @Test
+    fun `Not be leap year if divisible by 100 but not 400`(){
+        val isLeapYears = LeapYears().isLeapYear(2000)
+        assertThat(isLeapYears).isEqualTo(false)
     }
 }
