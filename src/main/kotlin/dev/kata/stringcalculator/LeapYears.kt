@@ -10,9 +10,6 @@ class LeapYears {
         if (isDivisibleBy4(year) && isNotDivisibleBy100(year)){
             return true
         }
-        if (isDivisibleBy400(year) && isNotDivisibleBy100(year)){
-            return false
-        }
         return isDivisibleBy400(year)
     }
 }
