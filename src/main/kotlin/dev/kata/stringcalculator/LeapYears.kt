@@ -1,8 +1,8 @@
 package dev.kata.stringcalculator
 
 class LeapYears {
-    fun isLeapYear(): Boolean
+    fun isLeapYear(year: Int): Boolean
     {
-        return false
+        return year % 400 == 0
     }
 }
