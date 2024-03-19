@@ -32,4 +32,10 @@ internal class LeapYearsShould {
         assertThat(isLeapYears).isEqualTo(false)
     }
 
+    @Test
+    fun `Be leap year if divisible by 400 and 100`(){
+        val isLeapYears = LeapYears().isLeapYear(4000)
+        assertThat(isLeapYears).isEqualTo(true)
+    }
+
 }
