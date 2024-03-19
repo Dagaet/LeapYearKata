@@ -16,7 +16,7 @@ internal class LeapYearsShould {
 
     @Test
     fun `Not be leap year if divisible by 100 but not 400`(){
-        val isLeapYears = LeapYears().isLeapYear(2000)
+        val isLeapYears = LeapYears().isLeapYear(2100)
         assertThat(isLeapYears).isEqualTo(false)
     }
 }
