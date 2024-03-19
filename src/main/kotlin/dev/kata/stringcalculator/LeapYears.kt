@@ -1,14 +1,18 @@
 package dev.kata.stringcalculator
 
 class LeapYears {
+    private fun isDivisibleBy400(year: Int) = year % 400 == 0
+    private fun isNotDivisibleBy100(year: Int) = year % 100 != 0
+    private fun isDivisibleBy4(year: Int) = year % 4 == 0
+
     fun isLeapYear(year: Int): Boolean
     {
-        if (year % 4 == 0 && year % 100 != 0){
+        if (isDivisibleBy4(year) && isNotDivisibleBy100(year)){
             return true
         }
-        if (year % 400 == 0 && year % 100 != 0){
+        if (isDivisibleBy400(year) && isNotDivisibleBy100(year)){
             return false
         }
-        return year % 400 == 0
+        return isDivisibleBy400(year)
     }
 }
