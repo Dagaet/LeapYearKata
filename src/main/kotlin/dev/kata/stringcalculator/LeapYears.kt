@@ -7,9 +7,6 @@ class LeapYears {
 
     fun isLeapYear(year: Int): Boolean
     {
-        if (isDivisibleBy4(year) && isNotDivisibleBy100(year)){
-            return true
-        }
-        return isDivisibleBy400(year)
+        return isDivisibleBy400(year) || (isDivisibleBy4(year) && isNotDivisibleBy100(year))
     }
 }
